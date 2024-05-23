@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CITAS</title>
-</head>
-<body>
-    <h1>HELLo World</h1>
-</body>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+    <!--animated css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <div class="nav nav-bar nav-bar-dark bg-dark">
+      <div class="container p-2">
+        <a href="/" class="navbar-brand">CITAS APP</a>
+      </div>
+    </div>
+    <div class="container-form p-4">
+      <div class="row">
+        <div class="col-md-4">
+          <form id="form-customer" class="card card-body">
+            <div class="form-group">
+              <input
+                type="text"
+                id="customer"
+                class="form-control"
+                placeholder="Name Customer"
+                autofocus
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="customer-age"
+                class="form-control"
+                placeholder="Age:"
+                autofocus
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="customer-phone"
+                class="form-control"
+                placeholder="Phone Number:"
+                autofocus
+              />
+            </div>
+            <button class="btn btn-primary">SAVE CUSTOMER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

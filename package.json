@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node src/backend/index.js",
-    "dev": "cross-env NODE_ENV=development nodemon src/backend/index.js",
-    "build":"cross-env NODE_ENV=production webpack"
+    "dev": "cross-env NODE_ENV=development nodemon src/backend/index.js --ignore src/frontend",
+    "build":"cross-env NODE_ENV=production webpack",
+    "server:dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
