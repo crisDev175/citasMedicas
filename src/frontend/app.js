@@ -1,4 +1,6 @@
-require('./styles/styles.css')
+import './styles/styles.css'
+import CustomerServices from './services/CustomerServices';
+
 
 document.getElementById('form-customer')
 .addEventListener('submit', e =>{
@@ -6,7 +8,9 @@ document.getElementById('form-customer')
     const ageCustomer = document.getElementById('customer-age').value;
     const phoneCustomer = document.getElementById('customer-phone').value;
 
-    console.log(nameCustomer, ageCustomer, phoneCustomer);
+    const customerService = new CustomerServices()
+    customerService.postCustomer()
+
     e.preventDefault();
 
 })
