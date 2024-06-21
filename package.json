@@ -6,30 +6,33 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node src/backend/index.js",
     "dev": "cross-env NODE_ENV=development nodemon src/backend/index.js --ignore src/frontend",
-    "build":"cross-env NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production webpack",
     "server:dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "cross-env": "^7.0.3",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mysql2": "^3.9.7",
-    "sequelize": "^6.37.3"
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "mysql2": "^3.10.1",
+    "sequelize": "6.37.3"
   },
   "devDependencies": {
-    "css-loader": "^7.1.1",
-    "html-webpack-plugin": "^5.6.0",
-    "mini-css-extract-plugin": "^2.9.0",
-    "morgan": "^1.10.0",
-    "nodemon": "^3.1.0",
-    "style-loader": "^4.0.0",
-    "timeago.js": "^4.0.2",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "@eslint/js": "^9.5.0",
+    "css-loader": "7.1.1",
+    "eslint": "^9.5.0",
+    "globals": "^15.6.0",
+    "html-webpack-plugin": "5.6.0",
+    "mini-css-extract-plugin": "2.9.0",
+    "morgan": "1.10.0",
+    "nodemon": "3.1.0",
+    "style-loader": "4.0.0",
+    "timeago.js": "4.0.2",
+    "webpack": "5.91.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": ".5.0.4"
   }
 }

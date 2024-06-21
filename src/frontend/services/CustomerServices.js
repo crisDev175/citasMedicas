@@ -1,34 +1,44 @@
 class CustomerServices {
 
-    constructor(){
+    constructor() {
         this.URI = 'http://localhost:4000/api/v1/customer'
     }
 
-    async getCustomer(){
+    async getCustomer() {
         const response = await fetch(this.URI);
-        const customer = await response.json()
-        return customer;
+        const customers = await response.json()
+        return customers;
     }
 
-    async postCustomer(customer){
+    async postCustomer(customer) {
+        try{
         const res = await fetch(this.URI, {
             method: 'POST',
-            body: customer
-        });
-        const data = await res.json();
+            headers: {
+              'Content-Type': 'application/json'
+            },
+             body: JSON.stringify(customer)
+         });
+
+        const data = res.json()
+        console.log(data)
+        return data;
+    }catch(error){
+        console.log(error)
+    }
     }
 
-    async deleteCustomer(customerId){
+    async deleteCustomer(customerId) {
         const res = await fetch(`${this.URI}/${customerId}`, {
             headers: {
                 'Content-Type': 'application/json'
             },
             method: 'DELETE'
-    });
-    const data = await res.json();
-    console.log(data)
+        });
+        const data = await res.json();
+        console.log(data)
     }
 }
 
 
-export default CustomerServices;
+module.exports = CustomerServices;

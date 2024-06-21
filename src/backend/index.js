@@ -6,6 +6,7 @@ const express = require('express');
 const router = require('./routes/route.customer')
 const morgan = require('morgan')
 const path = require('path')
+const cors = require('cors')
 
 //initializations
 const app = express();
@@ -19,6 +20,9 @@ app.set('port', process.env.PORT || 5000);
 app.use(express.json())
 app.use(express.urlencoded({extended: false})); // entender los datos de formularios
 app.use(morgan('dev'))
+app.use(cors());
+
+//routes
 app.use('/api/v1', router)
 
 //static files
